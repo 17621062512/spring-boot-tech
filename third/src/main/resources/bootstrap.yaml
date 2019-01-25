@@ -1,0 +1,26 @@
+server:
+  port: 8083
+eureka:
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: "/actuator/health"
+    status-page-url-path: "/actuator/info"
+info:
+  active: ${spring.profiles.active}
+  version: ${self-description.version}
+  name: ${spring.application.name}
+  ip-address: ${spring.cloud.client.ip-address}
+  build-timestamp: ${self-description.buidtime}
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+        exclude: "heapdump"
+  endpoint:
+    health:
+      show-details: always
+  server:
+    servlet:
+      context-path: /actuator

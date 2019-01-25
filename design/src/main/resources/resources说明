@@ -1,0 +1,8 @@
+/resources目录是spring MVC默认的资源目录
+/static目录是spring MVC默认的!静态!资源目录(or /public or /resources or /META-INF/resources)
+spring.mvc.static-path-pattern=/resources/**  改变静态目录
+
+其他：
+Any resources with a path in /webjars/** are served from jar files if they are packaged in the Webjars format.
+
+See ResourceProperties for more supported options.

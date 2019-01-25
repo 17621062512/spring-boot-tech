@@ -1,0 +1,3 @@
+去除nohup.out： >/dev/null 2>&1
+指定配置项： -Dspring.profiles.active=uat
+nohup java -Dspring.profiles.active=uat -jar *****.jar  >/dev/null 2>&1 &

@@ -1,0 +1,18 @@
+<html>
+
+<body>
+<h1><a>http://velocity.apache.org/engine/2.0/user-guide.html</a></h1>
+Hello $customer.Name!
+<table>
+    #foreach( $mud in $mudsOnSpecial )
+        #if ( $customer.hasPurchased($mud) )
+            <tr>
+                <td>
+                    $flogger.getPromo( $mud )
+                </td>
+            </tr>
+        #end
+    #end
+</table>
+</body>
+</html>

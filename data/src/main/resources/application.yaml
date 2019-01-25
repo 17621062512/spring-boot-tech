@@ -1,0 +1,15 @@
+spring:
+  profiles.active: uat
+  application:
+    name: @project.artifactId@
+eureka:
+  instance.instance-id: ${spring.cloud.client.ip-address}:${server.port}
+self-description:
+  artifactId: @project.artifactId@
+  version: @project.version@
+  buidtime: @maven.build.timestamp@
+  sourceEncoding: @project.build.sourceEncoding@
+server:
+  compression:
+    enabled: true
+    mime-types: application/json

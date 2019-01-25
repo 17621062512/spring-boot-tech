@@ -1,0 +1,13 @@
+${AnsiColor.BRIGHT_GREEN}
+                    _                     __      __  _                    ______
+             _   __(_)___     _________  / /_  __/ /_(_)___  ____          \ \ \ \
+            | | / / / __ \   / ___/ __ \/ / / / / __/ / __ \/ __ \          \ \ \ \
+            | |/ / / /_/ /  (__  ) /_/ / / /_/ / /_/ / /_/ / / / /          / / / /
+            |___/_/ .___/  /____/\____/_/\__,_/\__/_/\____/_/ /_/          /_/_/_/
+                 /_/
+
+-----PROJECT_NAME    ${spring.application.name}
+-----PARENT_VERSION  ${self-description.version}
+-----PROJECT_ENV     ${spring.profiles.active}
+
+${AnsiColor.BRIGHT_GREEN}

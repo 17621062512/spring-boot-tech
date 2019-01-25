@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7000/eureka/
+management:
+  metrics:
+    export:
+      influx:
+        uri: http://localhost:8086
+        step: 5s
+#Configuring Random Values
+#@see  org.springframework.boot.env.RandomValuePropertySource
+#@see  org.springframework.boot.ansi.AnsiPropertySource
+#customer:
+#  name: ${random.uuid}

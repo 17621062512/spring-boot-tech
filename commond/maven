@@ -1,0 +1,14 @@
+基本
+mvn clean install -Dmaven.test.skip
+单独打包
+-pl, --projects
+        Build specified reactor projects instead of all projects
+-am, --also-make
+        If project list is specified, also build projects required by the list
+-amd, --also-make-dependents
+        If project list is specified, also build projects that depend on projects on the list
+
+mvn clean install -pl project-name -amd -Dmaven.test.skip
+
+新版本号
+mvn versions:set -DnewVersion=1.0.0.RELEASE

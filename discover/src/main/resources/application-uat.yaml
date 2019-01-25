@@ -1,0 +1,8 @@
+eureka:
+  server:
+      enable-self-preservation: false # 测试环境关闭自我保护
+  client:
+    serviceUrl:
+          defaultZone: http://127.0.0.1:7000/eureka/
+    register-with-eureka: true # 向服务注册自己
+    fetch-registry: true

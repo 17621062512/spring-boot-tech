@@ -1,0 +1,9 @@
+eureka:
+  client:
+      serviceUrl:
+        defaultZone: http://127.0.0.1:7000/eureka/
+spring:
+  servlet:
+    multipart:
+      max-file-size: "5MB"
+      max-request-size: "10MB"

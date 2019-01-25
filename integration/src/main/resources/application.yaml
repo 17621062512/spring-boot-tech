@@ -1,0 +1,49 @@
+spring:
+  profiles.active: uat
+  application:
+    name: @project.artifactId@
+  mail:
+    username: xxxxx@endecho.com
+    password: 123456
+    #    test-connection: true
+    test-connection: false
+    port: 25
+    host: smtp.exmail.qq.com
+  quartz:
+    auto-startup: true
+    job-store-type: memory
+eureka:
+  instance.instance-id: ${spring.cloud.client.ip-address}:${server.port}
+self-description:
+  artifactId: @project.artifactId@
+  version: @project.version@
+  buidtime: @maven.build.timestamp@
+  sourceEncoding: @project.build.sourceEncoding@
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+customer:
+  #普通
+  #  name: "abc"
+  #类型转换
+  age: 365d
+  archiveSize: 1GB
+  nick-name:
+  #list类型
+  - "mike"
+  - "nike"
+  address:
+    #Map类型（k-v）
+    #非 （数字 或 字母 或 - ）的key，必须用[]环绕
+    "[家]": "123"
+    "[公司]": "321"
+    home: "addressssssssss"
+  #支持各种更深层次的结构Map<String,MyPojo> map
+  map:
+    key1:
+      name: dev name 1
+    key2:
+      name: dev name 2
+      description: dev description 2
+  ##############################################

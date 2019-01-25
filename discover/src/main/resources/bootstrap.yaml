@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service-discover
+server:
+  port: 7000
+  compression:
+      enabled: true
+      mime-types: application/json,application/xml,text/html,text/xml,text/plain
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 60
+    health-check-url-path: "/actuator/health"
+    status-page-url-path: "/actuator/info"
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${spring.application.name}:${server.port}/eureka/
+info:
+  active: ${spring.profiles.active}
+  version: ${self-description.version}
+  name: ${spring.application.name}
+  ip-address: ${spring.cloud.client.ip-address}
+  build-timestamp: ${self-description.buidtime}

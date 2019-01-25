@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: @project.artifactId@
+  profiles:
+    active: uat
+self-description:
+  artifactId: @project.artifactId@
+  version: @project.version@
+  buidtime: @maven.build.timestamp@
+  sourceEncoding: @project.build.sourceEncoding@
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
